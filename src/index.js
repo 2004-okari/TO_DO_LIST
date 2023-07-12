@@ -1,6 +1,3 @@
-import _ from 'lodash';
-import './style.css';
-import './index.html';
 
 const tasks = [
   {
@@ -22,7 +19,8 @@ tasks.forEach((task) => {
   const toDoList = document.createElement('div');
   toDoList.classList.add('item');
   toDoList.innerHTML = 
-  `<label class="label"><input type="checkbox" class="checkbox">${task[0]}</label>
+  `<input type="checkbox" class="checkbox">
+  <input type="text" name="name" value="${task['description']}" readonly class="label">
    <i class="fa-solid fa-trash-can icon-3"></i>`
 
   listStorage.appendChild(toDoList);
